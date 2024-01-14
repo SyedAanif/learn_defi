@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "learn_defi_backend": {
+      "main": "src/learn_defi_backend/main.mo",
+      "type": "motoko"
+    },
+    "learn_defi_frontend": {
+      "dependencies": [
+        "learn_defi_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/learn_defi_frontend/src/index.html"
+      },
+      "source": [
+        "src/learn_defi_frontend/assets",
+        "dist/learn_defi_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
